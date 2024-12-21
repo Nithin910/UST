@@ -1,0 +1,29 @@
+Compilation Process
+Definition:
+Compilation is the process where the entire source code is translated into machine code or intermediate code before execution.
+
+Steps involved Compilation:
+
+1. The programmer writes the code in a high-level language (e.g., C, Java).
+2. Breaks the code into tokens (keywords, identifiers, etc.).
+3. Checks for grammar and syntax errors.
+4. Ensures the logic is valid (e.g., type compatibility).
+5. Improves performance by refining the code.
+6. Converts the code into machine code (binary) or bytecode (for platforms like Java).
+7. The compiler produces an executable file that can run independently.
+Example:
+In Java
+Java: Source code (.java) --> Compiled to bytecode (.class) --> Executed by JVM.
+
+Interpretation Process
+Definition:
+Interpretation is the process where the source code is executed line by line, without converting it into a complete machine code file beforehand.
+
+Steps in Interpretation:
+
+1. The programmer writes the code in a high-level language (e.g., Python, JavaScript).
+2. The interpreter reads, translates, and executes each line of code immediately.
+3. Stops execution when an error is encountered.
+Example:
+
+Python: Source code (.py) --> Interpreted line-by-line by Python interpreter --> Immediate output.
