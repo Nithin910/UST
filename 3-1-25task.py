@@ -1,6 +1,8 @@
 print("Hey hai, Welcome to our e-kart shopping!!!")
-l={"bread":40,"cookies":80,"cheese":180,"butter":120,"yogurt":60}#40,80,180,120,60
-cl={}
+l=["bread","cookies","cheese","butter","yogurt"]#40,80,180,120,60
+lc=[40,80,180,120,60]
+cl=[]
+clq=[]
 while(True):
     print("What do you want to do")
     print("press 1 for Viewing the items")
@@ -19,23 +21,36 @@ while(True):
     elif n==2:
         name=input("Enter the item name")
         num=int(input("Enter the quantity"))
-        cl[name]=num
+        cl.append(name)
+        clq.append(num)
     elif n==3:
         name=input("What u want to update")
         uq=int(input("enter the updated quantity"))
-        cl[name]=uq
+        for i in range(len(cl)):
+            if name==cl[i]:
+                t=i
+                break
+        clq[i]=uq
     elif n==4:
         name=input("what item u want to delete")
         if name not in cl:
             print("There is no item found in ur cart")
         else:
-            cl.pop(name)
+            for i in range(len(cl)):
+                if name==cl[i]:
+                    t=clq[i]
+                    break
+            cl.remove(name)
+            clq.remove(t)
+                    
     elif n==5:
         s=0
-        for i in cl.keys():
-            if i in l.keys():
-                s+=cl[i]*l[i]
-                print("you ordered ",i,"in ",cl[i],"quantity,So the money is:",cl[i]*l[i])
+        for i in range(len(cl)):
+            for j in range(len(l)):
+                if cl[i]==l[j]:
+                    s+=clq[i]*lc[j]
+                    print("you ordered ",cl[i],"in ",clq[i],"quantity,So the money is:",clq[i]*lc[j])
+                    break
         print("The Total Bill is:",s)
         print("Thank You, Visit Again")
         break
